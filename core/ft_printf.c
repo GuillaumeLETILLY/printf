@@ -6,11 +6,11 @@
 /*   By: gletilly <gletilly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:00:53 by gletilly          #+#    #+#             */
-/*   Updated: 2024/10/27 23:10:26 by gletilly         ###   ########.fr       */
+/*   Updated: 2025/01/12 23:11:18 by gletilly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 static int	ft_handle_format(char format, va_list args)
 {
@@ -59,37 +59,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
-/*
-int	main(void)
-{
-	char			c;
-	char			*str;
-	void			*ptr;
-	int				num;
-	unsigned int	u_num;
-
-	c = 'A';
-	str = "Hello World!";
-	ptr = &c;
-	num = -42;
-	u_num = 42;
-	ft_printf("\n---- Test de chaque conversion ----\n\n");
-	ft_printf("Test %%c : %c\n", c);
-	ft_printf("Test %%s : %s\n", str);
-	ft_printf("Test %%p : %p\n", ptr);
-	ft_printf("Test %%d : %d\n", num);
-	ft_printf("Test %%i : %i\n", num);
-	ft_printf("Test %%u : %u\n", u_num);
-	ft_printf("Test %%x : %x\n", u_num);
-	ft_printf("Test %%X : %X\n", u_num);
-	ft_printf("Test %%%% : %%\n");
-	ft_printf("\n---- Test avec NULL ----\n\n");
-	ft_printf("Test %%s with NULL: %s\n", NULL);
-	ft_printf("Test %%p with NULL: %p\n", NULL);
-	ft_printf("\n---- Test avec valeurs limites ----\n\n");
-	ft_printf("Test %%d with INT_MIN: %d\n", -2147483648);
-	ft_printf("Test %%d with INT_MAX: %d\n", 2147483647);
-	return (0);
-}
-*/

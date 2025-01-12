@@ -6,11 +6,11 @@
 /*   By: gletilly <gletilly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 23:02:34 by gletilly          #+#    #+#             */
-/*   Updated: 2024/10/27 23:03:09 by gletilly         ###   ########.fr       */
+/*   Updated: 2025/01/12 23:17:07 by gletilly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_puthex(unsigned int n, int uppercase)
 {

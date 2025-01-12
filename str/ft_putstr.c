@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gletilly <gletilly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 22:37:45 by gletilly          #+#    #+#             */
-/*   Updated: 2024/10/27 22:53:17 by gletilly         ###   ########.fr       */
+/*   Created: 2025/01/12 23:12:31 by gletilly          #+#    #+#             */
+/*   Updated: 2025/01/12 23:12:53 by gletilly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putstr(char *s)
 {
-	int	count;
+	int	i;
 
-	count = 0;
-	if (n == -2147483648)
-	{
-		count += write(1, "-2147483648", 11);
-		return (count);
-	}
-	if (n < 0)
-	{
-		count += ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		count += ft_putnbr(n / 10);
-		count += ft_putnbr(n % 10);
-	}
-	else
-		count += ft_putchar(n + '0');
-	return (count);
+	i = 0;
+	if (!s)
+		return (ft_putstr("(null)"));
+	while (s[i])
+		i += ft_putchar(s[i]);
+	return (i);
 }

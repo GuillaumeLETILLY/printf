@@ -6,11 +6,11 @@
 /*   By: gletilly <gletilly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 23:04:06 by gletilly          #+#    #+#             */
-/*   Updated: 2024/11/06 11:45:58 by gletilly         ###   ########.fr       */
+/*   Updated: 2025/01/12 23:10:30 by gletilly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 static int	ft_puthex_long(unsigned long n)
 {

@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gletilly <gletilly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 22:51:47 by gletilly          #+#    #+#             */
-/*   Updated: 2024/10/27 22:53:19 by gletilly         ###   ########.fr       */
+/*   Created: 2025/01/12 23:11:52 by gletilly          #+#    #+#             */
+/*   Updated: 2025/01/12 23:12:12 by gletilly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_putnbr_unsigned(unsigned int n)
+int	ft_putchar(int c)
 {
-	int	count;
-
-	count = 0;
-	if (n >= 10)
-	{
-		count += ft_putnbr_unsigned(n / 10);
-		count += ft_putchar((n % 10) + '0');
-	}
-	else
-		count += ft_putchar(n + '0');
-	return (count);
+	write(1, &c, 1);
+	return (1);
 }
